@@ -3,19 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Petals by Kanak</title>
+        <title>Bliss & Petals </title>
         <link rel = "stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-      <nav class="navbar">
-            <a href="#home" class = "title">Petals by Kanak</a>
-            <a href="#featured">Featured</a>
-            <a href = "shop.html">Shop</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
+      <nav>
+        <ul class="navbar">
+            <li><a href="#home">Bliss & Petals</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li class="dropdown">
+                <a href="shop.html">Shop</a> 
+                <ul class="dropdown-menu">
+                    <li><a href="#bestselling">Best Selling</a></li>
+                    <li><a href="#budget">Budget-friendly</a></li>
+                    <li><a href="#luxury">Luxury Collection</a></li>
+                    <li><a href="#new">New Arrivals</a></li>
+                    <li><a href="#classic">Garden Classics</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
       <section id="home">
         <header>
@@ -26,13 +37,65 @@
           </video>
           <!-- Foreground Content -->
           <div class="content">
-            <h1>Petals by Kanak</h1>
+            <h1>Bliss & Petals</h1>
             <p>The finest of flower bouquets delivered in a day</p>
           </div>
         </div>
         </header>
-        <section class="featured">
-            <div class="product-container">
+        <section id="featured">
+            <h1>Featured Collection!✨</h1>
+            <p></p>
+            <div class="product-container sliding-wrapper">
+                <div class="sliding-track">
+                    <div class="product-card">
+                        <img src="images/multicolor.jpg" alt="Rainbow Bloom Collection">
+                        <h3>Rainbow Bloom Collection </h3>
+                        <p class="rating">★★★★★ (4.8)</p>
+                        <p class="price">₹599</p>
+                        <a href="multicolor.html" class="details-btn">View Details</a>
+                    </div>
+                <div class="product-card">
+                    <img src="images/daisy.jpg" alt="Daisy Delight">
+                    <h3>Daisy Delight</h3>
+                    <p class="rating">★★★★★ (5.0)</p>
+                    <p class="price">₹299</p>
+                    <a href="daisy.html" class="details-btn">View Details</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/blue.jpg" alt="Azure Bliss Bouquet">
+                    <h3>Azure Bliss Bouquet</h3>
+                    <p class="rating">★★★★☆ (4.8)</p>
+                    <p class="price">₹399</p>
+                    <a href="blue.html" class="details-btn">View Details</a>
+                </div>
+              <div class="product-card">
+                  <img src="images/pinktulip.jpg" alt="Pink Tulip Dream">
+                  <h3>Pink Tulip Dream</h3>
+                  <p class="rating">★★★★★ (4.9)</p>
+                  <p class="price">₹409</p>
+                  <a href="pinktulip.html" class="details-btn">View Details</a>
+              </div>
+              <div class="product-card">
+                  <img src="images/orchid.jpg" alt="Royal Orchid Bloom">
+                  <h3>Royal Orchid Bloom</h3>
+                  <p class="rating">★★★★☆ (4.6)</p>
+                  <p class="price">₹729</p>
+                  <a href="orchid.html" class="details-btn">View Details</a>
+              </div>
+              <div class="product-card">
+                  <img src="images/hydrangea.jpg" alt="Hydrangea Haven">
+                  <h3>Hydrangea Haven</h3>
+                  <p class="rating">★★★★☆ (4.3)</p>
+                  <p class="price">₹399</p>
+                  <a href="hydrangea.html" class="details-btn">View Details</a>
+              </div>
+                <div class="product-card">
+                    <img src="images/yellowtulip.jpg" alt="Golden Tulip Grace">
+                    <h3>Golden Tulip Grace</h3>
+                    <p class="rating">★★★★★ (4.6)</p>
+                    <p class="price">₹529</p>
+                    <a href="yellowtulip.html" class="details-btn">View Details</a>
+                </div>
                 <div class="product-card">
                     <img src="images/multicolor.jpg" alt="Rainbow Bloom Collection">
                     <h3>Rainbow Bloom Collection </h3>
@@ -52,35 +115,36 @@
                     <h3>Azure Bliss Bouquet</h3>
                     <p class="rating">★★★★☆ (4.8)</p>
                     <p class="price">₹399</p>
-                    <button>View Details</button>
+                    <a href="blue.html" class="details-btn">View Details</a>
                 </div>
               <div class="product-card">
                   <img src="images/pinktulip.jpg" alt="Pink Tulip Dream">
                   <h3>Pink Tulip Dream</h3>
                   <p class="rating">★★★★★ (4.9)</p>
                   <p class="price">₹409</p>
-                  <button>View Details</button>
+                  <a href="pinktulip.html" class="details-btn">View Details</a>
               </div>
               <div class="product-card">
                   <img src="images/orchid.jpg" alt="Royal Orchid Bloom">
                   <h3>Royal Orchid Bloom</h3>
                   <p class="rating">★★★★☆ (4.6)</p>
                   <p class="price">₹729</p>
-                  <button>View Details</button>
+                  <a href="orchid.html" class="details-btn">View Details</a>
               </div>
               <div class="product-card">
                   <img src="images/hydrangea.jpg" alt="Hydrangea Haven">
                   <h3>Hydrangea Haven</h3>
                   <p class="rating">★★★★☆ (4.3)</p>
                   <p class="price">₹399</p>
-                  <button>View Details</button>
+                  <a href="hydrangea.html" class="details-btn">View Details</a>
               </div>
                 <div class="product-card">
                     <img src="images/yellowtulip.jpg" alt="Golden Tulip Grace">
                     <h3>Golden Tulip Grace</h3>
                     <p class="rating">★★★★★ (4.6)</p>
                     <p class="price">₹529</p>
-                    <button>View Details</button>
+                    <a href="yellowtulip.html" class="details-btn">View Details</a>
+                </div>
                 </div>
             </div>
         </section>
