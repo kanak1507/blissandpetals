@@ -1,0 +1,84 @@
+.title {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* better than left */
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.566);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  scroll-behavior:smooth;
+}
+
+nav a {
+  color: #c875af;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+nav a:hover {
+  color: #d577f2;
+  transform: translateY(-1px);
+}
+
+.navbar li {
+  display: inline-flex;
+  position: relative;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;      /* or whatever spacing you want */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 180px;
+  display: none;
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.2s ease;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
