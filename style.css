@@ -14,7 +14,6 @@
   object-fit: cover;
   z-index: -1; /* Pushes the video behind text elements */
 }
-
 .content {
   position: relative;
   z-index: 1; /* Forces content to sit on top of the video */
@@ -28,162 +27,210 @@
 }
 .content h1{
     font-family: 'Poppins';
-    font-size: 4rem;
+    font-size: 3rem;
 }
-body{
-    font-family: 'Inter';
-    background:#ffffff
-}
-.title{
-    font-family: 'Imperial Script';
-    font-weight: 500;
+.content p{
+    font-family: 'Poppins';
     font-size: 1.2rem;
 }
-.navbar li {
-    position: relative;
-}
-
-.product-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Desktop */
-    gap: 25px;
-    width: 90%;
-    max-width: 1400px;
-    margin: 40px auto;
-}
-/* Tablet - 2 cards */
-@media (max-width: 992px){
-    .product-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile - 1 card */
-@media (max-width: 576px){
-    .product-container{
-        grid-template-columns: 1fr;
-    }
-}
-nav {
+body {
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    gap: 1.6rem;
-    background: rgba(255, 255, 255, 0.566);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 16px 40px rgba(45, 33, 25, 0.12);
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    background:#ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
 }
 
-nav a {
+#featured{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#featured h1{
+    margin-bottom: 40px;
     color: #c875af;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    padding-right:2rem;
-    transition: color 0.25s ease, transform 0.25s ease;
 }
-
-nav a:hover {
-    color: #d577f2;
-    transform: translateY(-1px);
-}
-.navbar li {
-    display: inline-flex;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    list-style: none;
-    padding: 10px 0;
-    min-width: 180px;
-    display: none;
-}
-
-.dropdown-menu li {
-    display: block;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 16px;
-    color: #333;
-}
-
-.dropdown:hover > .dropdown-menu {
-    display: block;
-}
-
-.navbar a:hover,
-.dropdown-menu a:hover {
-    color: #d6336c;
-}
-
-.product-card{
-    width: 400px;
-    flex-shrink: 0;
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; 
-    padding:0px 5px 10px;
-}
-
-.product-card:hover{
-    transform: translateY(-10px);
-}
-
-.product-card img{
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+#featured p{
+    margin-bottom: 50px;
+    color: #666;
+    font-size: 1.1rem;
 }
 
 .product-container{
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    padding: 20px 0;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.sliding-wrapper{
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .sliding-track{
     display: flex;
-    gap: 20px;
-    min-width: max-content;
+    gap: 25px;
+    width: max-content;
     animation: slide-products 25s linear infinite;
 }
 
-.sliding-wrapper:hover .sliding-track{
+.product-container:hover .sliding-track{
     animation-play-state: paused;
 }
 
-.sliding-track .product-card{
-    min-width: 400px;
+.product-card{
+    width: 320px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.034);
+    transition: transform .3s ease, box-shadow .3s ease;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.product-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.2);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-card h3{
+    margin:15px 10px 8px;
+    font-size:1.2rem;
+    color:#333;
+}
+
+.price{
+    color:#c875af;
+    font-size:1.2rem;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.details-btn{
+    display:inline-block;
+    padding:10px 22px;
+    background:#c875af;
+    color:#fff;
+    text-decoration:none;
+    border-radius:25px;
+    transition:.3s;
+    font-size:1.2rem;
+}
+
+.details-btn:hover{
+    background:#d577f2;
 }
 
 @keyframes slide-products{
-    0%{
-        transform: translateX(0);
+    from{
+        transform:translateX(0);
     }
-    100%{
-        transform: translateX(-50%);
+    to{
+        transform:translateX(-50%);
     }
+}
+
+@media (max-width:992px){
+    .product-card{
+        width:280px;
+    }
+
+    .product-card img{
+        height:220px;
+    }
+}
+
+@media (max-width:576px){
+    .product-card{
+        width:240px;
+    }
+
+    .product-card img{
+        height:180px;
+    }
+}
+.about{
+    width:90%;
+    max-width:1000px;
+    margin:100px auto;
+    text-align:center;
+    padding-top: 20px; 
+}
+
+.about-content h1{
+    font-size:3.2rem;
+    color:#5A476A;
+    margin-bottom:30px;
+    font-family:"Cormorant Garamond", serif;
+    font-weight:700;
+}
+
+.about-content p{
+    color:#666;
+    font-size:1.05rem;
+    line-height:1.9;
+    margin-bottom:22px;
+}
+
+.about-stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.stat{
+    width:220px;
+    background:#e7c9ff;
+    padding:30px 20px;
+    border-radius:20px;
+    transition:.35s ease;
+    box-shadow:0 8px 20px rgba(166,122,216,.08);
+    color:#5A476A;
+}
+
+.stat:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(166,122,216,.18);
+    background:#dbb5f9;
+}
+h1, h2, h3, nav a, .title, button {
+  font-family: 'Poppins', sans-serif;
+}
+.contact{
+    width:90%;
+    max-width:1000px;
+    margin:100px auto;
+    text-align:center;
+}
+.contact h1{
+    font-size:3.2rem;
+    color:#5A476A;
+    margin-bottom:30px;
+    font-family:"Cormorant Garamond", serif;
+    font-weight:700;
+}
+.contact-content{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.contact p{
+    color:#666;
+    font-size:1.05rem;
+    line-height:1.9;
+    margin-bottom:22px;
+}
+footer{
+    background:#5A476A;
+    color:white;
+    text-align:center;
+    padding:10px 0;
 }
