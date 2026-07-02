@@ -119,5 +119,6 @@ nav a:hover {
   /* Make navigation text smaller */
   nav a {
     font-size: 0.8rem;
+     letter-spacing: 0.08em;
   }
 }
