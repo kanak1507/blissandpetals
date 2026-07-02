@@ -63,6 +63,9 @@ This project was created to:
 * Learn multi-page website development
 
 ---
+🌐 Live Demo:
+https://kanak1507.github.io/blissandpetals/
+---
 
 ## 🚀 Future Improvements
 
