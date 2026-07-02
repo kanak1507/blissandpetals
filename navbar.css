@@ -103,3 +103,21 @@ nav a:hover {
     font-size: 0.9rem;
   }
 }
+@media (max-width: 576px) {
+  /* Reduce navbar padding on very small phones */
+  nav {
+    padding: 0.8rem 0.5rem;
+  }
+
+  /* Stack items vertically on small phones */
+  .navbar {
+    gap: 12px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  /* Make navigation text smaller */
+  nav a {
+    font-size: 0.8rem;
+  }
+}
