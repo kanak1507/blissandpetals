@@ -6,14 +6,14 @@
 nav {
   width: 100%;
   display: flex;
-  justify-content: space-between; /* better than left */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.566);
   position: sticky;
   top: 0;
   z-index: 10;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 nav a {
@@ -34,27 +34,32 @@ nav a:hover {
   display: inline-flex;
   position: relative;
 }
+
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;      /* or whatever spacing you want */
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 /* dropdown */
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 5px);
   left: 0;
   background: white;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   list-style: none;
   padding: 10px 0;
   min-width: 180px;
-  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
 }
 
 .dropdown-menu li {
@@ -67,18 +72,56 @@ nav a:hover {
   color: #333;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-.dropdown-menu {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.2s ease;
-}
-
+/* Show dropdown on hover (desktop) and focus-within (mobile & desktop) */
 .dropdown:hover .dropdown-menu,
-.dropdown-menu:hover {
-  display: block;
+.dropdown:focus-within .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .navbar {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    background: rgba(255, 255, 255, 0.95);
+    margin-top: 0;
+    border: none;
+    box-shadow: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    transform: scaleY(1);
+    max-height: 300px;
+  }
+
+  .dropdown-menu li {
+    padding: 8px 0;
+  }
+
+  .dropdown-menu a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
 }
