@@ -1,21 +1,28 @@
+/* =========================
+   Navigation Bar
+========================= */
+
+/* Website title/logo styling */
 .title {
   font-weight: 500;
   font-size: 1.2rem;
 }
 
+/* Main navigation bar */
 nav {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Places logo and menu on opposite sides */
+  align-items: center;            /* Vertically centers items */
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.566);
-  position: sticky;
+  position: sticky;               /* Keeps navbar visible while scrolling */
   top: 0;
   z-index: 10;
   scroll-behavior: smooth;
 }
 
+/* Navigation links */
 nav a {
   color: #c875af;
   text-decoration: none;
@@ -25,16 +32,19 @@ nav a {
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
   color: #d577f2;
   transform: translateY(-1px);
 }
 
+/* Individual navigation list item */
 .navbar li {
   display: inline-flex;
-  position: relative;
+  position: relative; /* Needed for positioning dropdown menu */
 }
 
+/* Navigation menu container */
 .navbar {
   display: flex;
   justify-content: center;
@@ -45,9 +55,14 @@ nav a:hover {
   padding: 0;
 }
 
+/* =========================
+   Dropdown Menu
+========================= */
+
+/* Hidden dropdown menu */
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 5px);
+  top: calc(100% + 5px); /* Places menu below the parent item */
   left: 0;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -55,22 +70,25 @@ nav a:hover {
   list-style: none;
   padding: 10px 0;
   min-width: 180px;
-  opacity: 0;
+  opacity: 0;                    /* Hidden by default */
   transform: translateY(10px);
   transition: opacity 0.2s ease, transform 0.2s ease;
-  pointer-events: none;
+  pointer-events: none;          /* Prevents interaction while hidden */
 }
 
+/* Dropdown menu items */
 .dropdown-menu li {
   display: block;
 }
 
+/* Dropdown links */
 .dropdown-menu a {
   display: block;
   padding: 10px 16px;
   color: #333;
 }
 
+/* Show dropdown on hover (desktop) and keyboard focus */
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu {
   opacity: 1;
@@ -78,19 +96,17 @@ nav a:hover {
   pointer-events: auto;
 }
 
+/* =========================
+   Mobile Responsive Styles
+========================= */
+
 @media (max-width: 992px) {
-  .dropdown-menu {
-    display: none !important;
-  }
-
-  .dropdown a {
-    pointer-events: auto;
-  }
-}
-
-@media (max-width: 768px) {
+  /* Tablet and mobile navbar layout */
   nav {
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem 1rem;
+    padding: 0.9rem 1rem;
   }
 
   .navbar {
@@ -103,52 +119,36 @@ nav a:hover {
     font-size: 0.9rem;
   }
 
-  nav {
-    justify-content: center;
-    gap: 0.8rem 1rem;
-    padding: 0.9rem 1rem;
+  /* Hide dropdown menu entirely on tablet and below */
+  .dropdown-menu {
+    display: none !important;
   }
 
-  nav a {
-    font-size: 0.9rem;
+  /* Make Shop link just navigate normally */
+  .dropdown a {
+    pointer-events: auto;
   }
 }
 
 @media (max-width: 576px) {
+  /* Mobile navbar layout */
   nav {
     padding: 0.8rem 0.5rem;
   }
 
   .navbar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 10px;
-    width: 100%;
+    gap: 10px 16px;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .navbar li:first-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    display: flex;
   }
 
   .navbar li {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
   }
 
   nav a {
-    font-size: 0.85rem;
-    text-align: center;
-    letter-spacing: 0.06em;
-  }
-
-  .dropdown-menu {
-    display: none !important;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
   }
 }
