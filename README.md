@@ -1,4 +1,4 @@
-<img width="1898" height="815" alt="image" src="https://github.com/user-attachments/assets/c3276c7c-cf24-4fa3-8faa-f6b9eccd0e52" /><img width="1898" height="815" alt="image" src="https://github.com/user-attachments/assets/f9fc1621-9c3a-4343-a167-d3a7c2a309be" /># 🌸 Bliss & Petals
+<img width="1898" height="815" alt="image" src="https://github.com/user-attachments/assets/c3276c7c-cf24-4fa3-8faa-f6b9eccd0e52" /># 🌸 Bliss & Petals
 
 **Bliss & Petals** is a modern, elegant flower boutique website designed to provide a seamless online shopping experience for floral lovers. The project showcases a premium collection of handcrafted bouquets with a clean interface, responsive layout, and aesthetically pleasing design.
 
