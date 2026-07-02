@@ -1,4 +1,4 @@
-*{
+ *{
     margin: 0px;
     padding:0px;
     box-sizing:border-box;
@@ -216,3 +216,30 @@ h1, h2, h3, nav a, .title, button {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Section headings styling */
+.best-sellers h2,
+.budget-friendly h2,
+.luxury-collection h2,
+.new-arrivals h2,
+.garden-classics h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #6b1734;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.best-sellers h2 + p,
+.budget-friendly h2 + p,
+.luxury-collection h2 + p,
+.new-arrivals h2 + p,
+.garden-classics h2 + p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
