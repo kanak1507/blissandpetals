@@ -102,23 +102,53 @@ nav a:hover {
   nav a {
     font-size: 0.9rem;
   }
+
+  nav {
+    justify-content: center;
+    gap: 0.8rem 1rem;
+    padding: 0.9rem 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
 }
+
 @media (max-width: 576px) {
-  /* Reduce navbar padding on very small phones */
   nav {
     padding: 0.8rem 0.5rem;
   }
 
-  /* Stack items vertically on small phones */
   .navbar {
-    gap: 12px;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  /* Make navigation text smaller */
+  .navbar li:first-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    display: flex;
+  }
+
+  .navbar li {
+    display: flex;
+    justify-content: center;
+  }
+
   nav a {
-    font-size: 0.8rem;
-     letter-spacing: 0.08em;
+    font-size: 0.85rem;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+
+  .dropdown-menu {
+    display: none !important;
   }
 }
