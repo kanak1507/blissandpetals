@@ -285,7 +285,7 @@ body {
 .about-stats{
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:15px;
     margin-top:50px;
     flex-wrap:wrap;
 }
@@ -300,6 +300,7 @@ body {
     box-shadow:0 8px 20px rgba(166,122,216,.08);
     color:#5A476A;
 }
+
 
 /* Hover effect for statistics */
 .stat:hover{
