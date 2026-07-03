@@ -261,14 +261,14 @@ body {
     max-width:1000px;
     margin:100px auto;
     text-align:center;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 /* About heading */
 .about-content h1{
     font-size:3.2rem;
     color:#5A476A;
-    margin-bottom:30px;
+    margin-bottom:20px;
     font-family:"Cormorant Garamond", serif;
     font-weight:700;
 }
@@ -292,7 +292,7 @@ body {
 
 /* Individual statistic card */
 .stat{
-    width:180px;
+    width:150px;
     background:#e7c9ff;
     padding:20px 15px;
     border-radius:20px;
